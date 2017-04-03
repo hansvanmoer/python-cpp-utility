@@ -42,8 +42,8 @@ set_property(TARGET boost-python PROPERTY INTERFACE_INCLUDE_DIRECTORIES ${Boost_
 if(DEFINED PYTHON_SCRIPT_UTIL_BOOST_PYTHON_LIBRARY_OVERRIDE)
 	message(STATUS "boost python library override specified: use this only to point to boost-python library for the correct python version if FindBoost doesn't find it")
 	message(STATUS "overriding boost-python library with following library ${PYTHON_SCRIPT_UTIL_BOOST_PYTHON_LIBRARY_OVERRIDE}")
-	set(Boost_PYTHON_LIBRARY "${GAME_BOOST_PYTHON_LIBRARY_OVERRIDE}")
-endif(DEFINED GAME_BOOST_PYTHON_LIBRARY_OVERRIDE)
+	set(Boost_PYTHON_LIBRARY "${PYTHON_SCRIPT_UTIL_BOOST_PYTHON_LIBRARY_OVERRIDE}")
+endif()
 
 set_property(TARGET boost-python PROPERTY IMPORTED_LOCATION ${Boost_PYTHON_LIBRARY})
 
@@ -68,4 +68,4 @@ add_library(python-script-util ScriptError.cpp Source.cpp Run.cpp Scheduler.cpp 
 add_subdirectory(test)
 
 enable_testing()
-add_test(python-script-util-tests test/script-tests)
+add_test(python-script-util-tests bin/python-script-util-tests)
