@@ -15,3 +15,8 @@ test/Testing/*
 bin/**
 lib/**
 doc/**
+
+# Netbeans configuration files
+
+compile_commands.json
+nbproject/**

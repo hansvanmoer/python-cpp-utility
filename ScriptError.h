@@ -1,9 +1,6 @@
-/* 
- * File:   ScriptError.h
- * Author: hans
- *
- * Created on March 22, 2017, 8:14 PM
- */
+///
+/// Contains the base error type for all script errors
+///
 
 #ifndef SCRIPT_SCRIPT_ERROR_H
 #define	SCRIPT_SCRIPT_ERROR_H
@@ -11,15 +8,19 @@
 #include <stdexcept>
 
 namespace Game{
-    
-    namespace Script{
-        
-        class ScriptError : public std::runtime_error{
-            using std::runtime_error::runtime_error;
-        };
-        
-    }
-    
+
+	namespace Script{
+		
+		///
+		/// A base type for all script errors
+		///
+		class ScriptError : public std::runtime_error{
+		public:
+			using std::runtime_error::runtime_error;
+		};
+
+	}
+
 }
 
 #endif	/* SCRIPTERROR_H */

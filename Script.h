@@ -1,9 +1,7 @@
-/* 
- * File:   Script.h
- * Author: hans
- *
- * Created on March 2, 2017, 1:45 PM
- */
+///
+/// Includes all headers needed to use the library
+/// Users of the library can include this header to use all of it's functionality
+///
 
 #ifndef SCRIPT_SCRIPT_H
 #define	SCRIPT_SCRIPT_H
