@@ -94,29 +94,29 @@ DuplicateSourceError::DuplicateSourceError(const Source::Id& id) : SourceError(i
 
 NoSuchSourceError::NoSuchSourceError(const Source::Id& id) : SourceError(id, string{"unknown source: "}+id){}
 
-SourceFactory::SourceFactory() : sources_(){}
+SourceManager::SourceManager() : sources_(){}
 
-SourceRef SourceFactory::create_source(const Source::Id& id, string&& buffer){
+SourceRef SourceManager::create_source(const Source::Id& id, string&& buffer){
     return add_source(new BufferedSource{id, forward<string>(buffer)});
 }
 
-SourceRef SourceFactory::create_source(const Source::Id &id, const string &buffer){
+SourceRef SourceManager::create_source(const Source::Id &id, const string &buffer){
     return add_source(new BufferedSource{id, buffer});
 }
 
-SourceRef SourceFactory::create_source_from_file(const Source::Id &id, const std::string &path, bool defer_load){
+SourceRef SourceManager::create_source_from_file(const Source::Id &id, const std::string &path, bool defer_load){
     return add_source(new FileSource{id, path, defer_load});
 }
 
-SourceRef SourceFactory::create_source_from_file(const std::string &path, bool defer_load){
+SourceRef SourceManager::create_source_from_file(const std::string &path, bool defer_load){
     return add_source(new FileSource{path, defer_load});
 }
 
-bool SourceFactory::has_source(const Source::Id &id) const{
+bool SourceManager::has_source(const Source::Id &id) const{
     return sources_.find(id) != sources_.end();
 }
 
-SourceRef SourceFactory::get_source(const Source::Id &id) const{
+SourceRef SourceManager::get_source(const Source::Id &id) const{
     auto found = sources_.find(id);
     if(found == sources_.end()){
         throw NoSuchSourceError{id};
@@ -125,13 +125,30 @@ SourceRef SourceFactory::get_source(const Source::Id &id) const{
     }
 }
 
-SourceRef SourceFactory::add_source(Source *source){
+SourceRef SourceManager::add_source(SourceRef source){
     Source::Id id = source->id();
-    SourceRef ref{source};
     if(has_source(id)){
         throw DuplicateSourceError{id};
     }else{
-        sources_.insert(make_pair(id, ref));
-        return ref;
+        sources_.insert(make_pair(id, source));
+        return source;
+    }
+}
+
+
+SourceRef SourceManager::add_source(Source *source){
+    return add_source(SourceRef{source});
+}
+
+void SourceManager::remove_source(SourceRef source){
+    return remove_source(source->id());
+}
+
+void SourceManager::remove_source(const Source::Id &id){
+    auto found = sources_.find(id);
+    if(found == sources_.end()){
+        throw NoSuchSourceError{id};
+    }else{
+        sources_.erase(found);
     }
 }

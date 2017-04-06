@@ -53,11 +53,22 @@ bool ScriptSystem::execute_and_wait(SourceRef source, Run::BeforeCallback before
     return execute(source, before, after).get();
 }
 
-SourceFactory &ScriptSystem::sources(){
+
+future<bool> ScriptSystem::execute(const Source::Id &id, Run::BeforeCallback before, Run::AfterCallback after){
+    return execute(sources_.get_source(id), before, after);
+}
+
+bool ScriptSystem::execute_and_wait(const Source::Id &id, Run::BeforeCallback before, Run::AfterCallback after) {
+    return execute_and_wait(sources_.get_source(id), before, after);
+}
+
+
+
+SourceManager &ScriptSystem::sources(){
     return sources_;
 }
 
-const SourceFactory &ScriptSystem::sources() const{
+const SourceManager &ScriptSystem::sources() const{
     return sources_;
 }
 

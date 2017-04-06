@@ -42,10 +42,10 @@ namespace Game{
 
 			///
 			/// Creates a new module definition
-			/// \param id the module's unique id
-			/// \param initializer the module's initializer function
+			/// \param id_ the module's unique id
+			/// \param initializer_ the module's initializer function
 			///
-			ModuleDefinition(const Id &id, Initializer initializer);
+			ModuleDefinition(const Id &id_, Initializer initializer_);
 		};
 
 		///
@@ -119,7 +119,7 @@ namespace Game{
 
 			///
 			/// Checks whether a module with the given id is defined
-			/// \param the module's id
+			/// \param id the module's id
 			/// \return true if the module was registered, false otherwise
 			///
 			bool has_module(const ModuleDefinition::Id &id) const;
