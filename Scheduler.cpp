@@ -2,7 +2,7 @@
 
 #include <cassert>
 
-using namespace Game::Script;
+using namespace PythonCppUtility;
 using namespace std;
 
 Scheduler::Scheduler(std::size_t max_thread_count, bool start_after_init) : max_thread_count_(max_thread_count), threads_(), tasks_(), state_(Scheduler::State::STOPPED), mutex_(), condition_variable_(){

@@ -5,7 +5,7 @@
 #include <sstream>
 #include <iterator>
 
-using namespace Game::Script;
+using namespace PythonCppUtility;
 
 using namespace std;
 

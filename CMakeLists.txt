@@ -63,7 +63,7 @@ include_directories(${PYTHON_INCLUDE_DIRS})
 message(STATUS "python libraries: ${PYTHON_LIBRARIES}")
 message(STATUS "python headers: ${PYTHON_INCLUDE_DIRS}")
 
-add_library(python-script-util ScriptError.cpp Source.cpp Run.cpp Scheduler.cpp Module.cpp System.cpp)
+add_library(python-script-util Source.cpp Run.cpp Scheduler.cpp Module.cpp System.cpp)
 
 add_subdirectory(test)
 

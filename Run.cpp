@@ -2,7 +2,7 @@
 
 #include <boost/python.hpp>
 
-using namespace Game::Script;
+using namespace PythonCppUtility;
 
 using namespace std;
 

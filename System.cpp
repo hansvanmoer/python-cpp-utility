@@ -1,6 +1,6 @@
 #include "System.h"
 
-using namespace Game::Script;
+using namespace PythonCppUtility;
 using namespace std;
 
 ScriptSystem::ScriptSystem(size_t worker_thread_count) : scheduler_(worker_thread_count, false), sources_(), modules_(), running_(){}

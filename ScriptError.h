@@ -7,19 +7,15 @@
 
 #include <stdexcept>
 
-namespace Game{
+namespace PythonCppUtility {
 
-	namespace Script{
-		
-		///
-		/// A base type for all script errors
-		///
-		class ScriptError : public std::runtime_error{
-		public:
-			using std::runtime_error::runtime_error;
-		};
-
-	}
+    ///
+    /// A base type for all script errors
+    ///
+    class ScriptError : public std::runtime_error {
+    public:
+        using std::runtime_error::runtime_error;
+    };
 
 }
 

@@ -2,7 +2,7 @@
 
 #include <utility>
 
-using namespace Game::Script;
+using namespace PythonCppUtility;
 using namespace std;
 
 ModuleDefinition::ModuleDefinition(const ModuleDefinition::Id &id_, ModuleDefinition::Initializer initializer_) : id(id_), initializer(initializer_){}
