@@ -2,8 +2,8 @@
 /// Contains types to make management of embedded modules easier
 ///
 
-#ifndef SCRIPT_MODULE_H
-#define	SCRIPT_MODULE_H
+#ifndef PYTHON_CPP_UTILITY_MODULE_H
+#define	PYTHON_CPP_UTILITY_MODULE_H
 
 #include "ScriptError.h"
 
@@ -164,5 +164,5 @@ namespace PythonCppUtility {
 
 }
 
-#endif	/* MODULE_H */
+#endif	/* PYTHON_CPP_UTILITY_MODULE_H */
 

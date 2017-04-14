@@ -2,8 +2,8 @@
 /// This file contains some internal types used to keep track of running scripts and their thread state
 ///
 
-#ifndef SCRIPT_RUN_H
-#define	SCRIPT_RUN_H
+#ifndef PYTHON_CPP_UTILITY_RUN_H
+#define	PYTHON_CPP_UTILITY_RUN_H
 
 #include "Source.h"
 
@@ -108,5 +108,5 @@ namespace PythonCppUtility{
         };
 }
 
-#endif	/* RUN_H */
+#endif	/* PYTHON_CPP_UTILITY_RUN_H */
 

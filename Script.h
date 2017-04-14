@@ -3,11 +3,11 @@
 /// Users of the library can include this header to use all of it's functionality
 ///
 
-#ifndef SCRIPT_SCRIPT_H
-#define	SCRIPT_SCRIPT_H
+#ifndef PYTHON_CPP_UTILITY_SCRIPT_H
+#define	PYTHON_CPP_UTILITY_SCRIPT_H
 
 #include "Source.h"
 #include "System.h"
 
-#endif	/* SCRIPT_H */
+#endif	/* PYTHON_CPP_UTILITY_SCRIPT_H */
 

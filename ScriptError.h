@@ -2,8 +2,8 @@
 /// Contains the base error type for all script errors
 ///
 
-#ifndef SCRIPT_SCRIPT_ERROR_H
-#define	SCRIPT_SCRIPT_ERROR_H
+#ifndef PYTHON_CPP_UTILITY_SCRIPT_ERROR_H
+#define	PYTHON_CPP_UTILITY_SCRIPT_ERROR_H
 
 #include <stdexcept>
 
@@ -19,5 +19,5 @@ namespace PythonCppUtility {
 
 }
 
-#endif	/* SCRIPTERROR_H */
+#endif	/* PYTHON_CPP_UTILITY_SCRIPT_ERROR_H */
 

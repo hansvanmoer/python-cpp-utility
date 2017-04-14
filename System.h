@@ -1,8 +1,8 @@
 ///
 /// This header defines the script system
 ///
-#ifndef SCRIPT_SYSTEM_H
-#define	SCRIPT_SYSTEM_H
+#ifndef PYTHON_CPP_UTILITY_SYSTEM_H
+#define	PYTHON_CPP_UTILITY_SYSTEM_H
 
 #include "Source.h"
 #include "Run.h"
@@ -144,5 +144,5 @@ namespace PythonCppUtility {
 
 }
 
-#endif	/* SCRIPTSYSTEM_H */
+#endif	/* PYTHON_CPP_UTILITY_SYSTEM_H */
 

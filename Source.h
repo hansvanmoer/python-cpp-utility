@@ -2,8 +2,8 @@
 /// Contains types and functions to load and manage script sources
 ///
 
-#ifndef SCRIPT_SOURCE_H
-#define	SCRIPT_SOURCE_H
+#ifndef PYTHON_CPP_UTILITY_SOURCE_H
+#define	PYTHON_CPP_UTILITY_SOURCE_H
 
 #include "ScriptError.h"
 
@@ -349,5 +349,5 @@ namespace PythonCppUtility {
 
 }
 
-#endif	/* SOURCE_H */
+#endif	/* PYTHON_CPP_UTILITY_SOURCE_H */
 

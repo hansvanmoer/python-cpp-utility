@@ -2,8 +2,8 @@
 /// Contains a scheduler with a thread pool to manage the script runs
 ///
 
-#ifndef SCRIPT_SCHEDULER_H
-#define	SCRIPT_SCHEDULER_H
+#ifndef PYTHON_CPP_UTILITY_SCHEDULER_H
+#define	PYTHON_CPP_UTILITY_SCHEDULER_H
 
 #include "Run.h"
 
@@ -109,5 +109,5 @@ namespace PythonCppUtility {
     };
 }
 
-#endif	/* SCHEDULER_H */
+#endif	/* PYTHON_CPP_UTILITY_SCHEDULER_H */
 
