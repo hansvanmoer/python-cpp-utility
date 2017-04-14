@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.6)
-project(python-script-util)
+project(python-cpp-util)
 
 
 #
@@ -63,9 +63,12 @@ include_directories(${PYTHON_INCLUDE_DIRS})
 message(STATUS "python libraries: ${PYTHON_LIBRARIES}")
 message(STATUS "python headers: ${PYTHON_INCLUDE_DIRS}")
 
-add_library(python-script-util Source.cpp Run.cpp Scheduler.cpp Module.cpp System.cpp)
+add_library(python-cpp-util Source.cpp Run.cpp Scheduler.cpp Module.cpp System.cpp)
 
 add_subdirectory(test)
 
 enable_testing()
-add_test(python-script-util-tests bin/python-script-util-tests)
+add_test(python-cpp-util-tests bin/python-cpp-util-tests)
+
+install(TARGETS python-cpp-util ARCHIVE DESTINATION lib)
+install(FILES Run.h Scheduler.h Script.h ScriptError.h Source.h System.h DESTINATION include/PythonCppUtility)
